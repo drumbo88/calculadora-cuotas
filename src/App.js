@@ -1,8 +1,9 @@
-import CuotasForm from './components/CuotasForm';
+import CuotasPage from './components/CuotasPage';
+import TestPage from './components/TestPage';
 
 function App() {
   return (
-    <CuotasForm />
+    <TestPage />
   );
 }
 

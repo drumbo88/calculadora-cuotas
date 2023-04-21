@@ -6,3 +6,21 @@ table.config {
   font-size: 0.9em;
   background-color: gray
 }
+.form {
+    float: left
+}
+hr {
+    clear: both
+}
+.leftPanel {
+    float: left;
+    width: 80%;
+}
+.rightPanel {
+    float: right;
+    width: 20%;
+}
+.cuotasSavingsTable {
+    width: 100%;
+    text-align: center
+}
