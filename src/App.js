@@ -3,7 +3,7 @@ import TestPage from './components/TestPage';
 
 function App() {
   return (
-    <TestPage />
+    <CuotasPage />
   );
 }
 
