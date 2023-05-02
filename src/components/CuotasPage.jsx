@@ -188,20 +188,24 @@ const CuotasSavingsTable = ({state}) => {
     <tbody>
     <tr>
         <th>Cuotas</th>
-        <th>%</th>
+        {/*<th>%</th>*/}
+        <th>% Real</th>
     </tr>
-    {[1, 3, 6, 9, 10, 12, 15, 18, 24].map((x) => (
-        <tr>
-        <td>{x}</td>
-        <td>{getNumber((1 - getCoefInteres(x) / x) * 100)}%</td>
-        </tr>
-    ))}
+    {[1, 3, 6, 9, 10, 12, 15, 18, 24].map((x) => {
+        const porc = (1 - getCoefInteres(x) / x) * 100
+        return (
+            <tr>
+                <td>{x}</td>
+                {/*<td>{getNumber(porc)}%</td>*/}
+                <td>{getNumber(porc*0.9)}%</td>
+            </tr>
+    )})}
     </tbody>
 </table>
 )};
 
 function CuotasPage() {
-  const [tna, setTna] = useState(81);
+  const [tna, setTna] = useState(91);
   const changeTna = (event) => setTna(parseFloat(event.target.value) || 0)
   const [limite, setLimite] = useState(200);
   const changeLimite = (event) => setLimite(event.target.value ? parseFloat(event.target.value) : null)
